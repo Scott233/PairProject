@@ -6,6 +6,12 @@
     background-color: gold;
 }
 
+.remove-button {
+    cursor: pointer;
+    font-size: xx-small;
+    margin-left: 4px;
+}
+
 .top10-item {
     cursor: pointer;
     padding: 9px;

@@ -22,14 +22,14 @@ function renderTop10(top10) {
 
     const top10List = document.getElementById('top10');
     for (const item of top10) {
-        const a = document.createElement('a');
-        a.className = 'badge badge-primary top10-item';
-        a.innerText = item;
-        a.onclick = () => {
+        const span = document.createElement('span');
+        span.className = 'badge badge-primary top10-item';
+        span.innerText = item;
+        span.onclick = () => {
             performSearch(item);
             loadTrend(item);
         }
-        top10List.append(a);
+        top10List.append(span);
         top10List.append(' ');
     }
 }
@@ -48,10 +48,10 @@ function renderSearchResult(searchResult, keyword) {
         {
             const h = document.createElement('h3');
             const r = '/' + keyword + '/g';
-            h.innerHTML += item['title'].replace(eval(r), '<b class="highlight-span">' + keyword + '</b>');
+            h.innerHTML += item['title'].replace(eval(r), '<b class="highlight-span">' + keyword + '</b> ');
             const span = document.createElement('span');
             span.innerText = '移除';
-            span.className = 'btn btn-link';
+            span.className = 'badge badge-danger remove-button';
             h.append(span);
             span.onclick = () => searchResultList.removeChild(li);
             li.append(h);
