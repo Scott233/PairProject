@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+}
+
+.highlight-span {
+    background-color: gold;
+}
+
+.top10-item {
+    cursor: pointer;
+    padding: 9px;
+}
