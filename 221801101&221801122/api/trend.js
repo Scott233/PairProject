@@ -3,9 +3,9 @@ const fs = require('fs');
 function getTrend(paperArray, keyword) {
     const trend = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     for (const paper of paperArray) {
-        const keywords = paper['keywords'];
         const year = paper['year'];
-        if (year >= 2010 && year < 2020)
+        const keywords = paper['keywords'];
+        if (year<2020 && year>=2010)
             if (keywords.indexOf(keyword) > -1)
                 ++trend[year - 2010]
     }

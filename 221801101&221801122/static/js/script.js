@@ -1,7 +1,7 @@
 function requestTop10() {
     $.get('/PairHomework/api/top10', result => {
-        const top10 = JSON.parse(result);
         const peak = top10[0];
+        const top10 = JSON.parse(result);
         performSearch(peak);
         loadTrend(peak);
         renderTop10(top10);
@@ -57,16 +57,16 @@ function renderSearchResult(searchResult, keyword) {
             li.append(h);
         }
         {
-            const p = document.createElement('p');
             const b = document.createElement('b');
+            const p = document.createElement('p');
             b.append('发布年份：')
             p.append(b);
             p.append(item['year'].toString());
             li.append(p);
         }
         {
-            const p = document.createElement('p');
             const b = document.createElement('b');
+            const p = document.createElement('p');
             b.append('关键词：');
             p.append(b);
             let keywords = item['keywords'];
@@ -81,8 +81,8 @@ function renderSearchResult(searchResult, keyword) {
             li.append(p);
         }
         {
-            const p = document.createElement('p');
             const b = document.createElement('b');
+            const p = document.createElement('p');
             b.append('链接：');
             p.append(b);
             const a = document.createElement('a');
@@ -95,8 +95,8 @@ function renderSearchResult(searchResult, keyword) {
         {
             const ab = item['abstraction'];
             if (ab) {
+                const b = document.createElement('b');               
                 const p = document.createElement('p');
-                const b = document.createElement('b');
                 b.append('摘要：');
                 p.append(b);
                 const r = '/' + keyword + '/g';
