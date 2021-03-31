@@ -2,9 +2,9 @@ const fs = require('fs');
 
 function getTop10(jsonArr) {
     const frequencyMap = {};
-    for (let i = 0; i < jsonArr.length; ++i) {
+    for (let i = 0; i < jsonArr.length; i++) {
         const keywords = jsonArr[i]['keywords'];
-        for (let j = 0; j < keywords.length; ++j) {
+        for (let j = 0; j < keywords.length; j++) {
             if (frequencyMap[keywords[j]])
                 ++frequencyMap[keywords[j]];
             else frequencyMap[keywords[j]] = 1;
