@@ -1,7 +1,7 @@
 function requestTop10() {
     $.get('/PairHomework/api/top10', result => {
-        const top10 = JSON.parse(result);
         const peak = top10[0];
+        const top10 = JSON.parse(result);
         performSearch(peak);
         loadTrend(peak);
         renderTop10(top10);
