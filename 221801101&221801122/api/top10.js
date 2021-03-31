@@ -17,7 +17,6 @@ function getTop10(jsonArr) {
 
 fs.readFile('data.json', 'utf-8', (err, data) => {
     const top10 = getTop10(JSON.parse(data));
-
     const http = require('http');
     const server = http.createServer(((req, res) => {
         res.writeHead(200);
