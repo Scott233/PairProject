@@ -81,8 +81,8 @@ function renderSearchResult(searchResult, keyword) {
             li.append(p);
         }
         {
-            const p = document.createElement('p');
             const b = document.createElement('b');
+            const p = document.createElement('p');
             b.append('链接：');
             p.append(b);
             const a = document.createElement('a');
@@ -95,7 +95,7 @@ function renderSearchResult(searchResult, keyword) {
         {
             const ab = item['abstraction'];
             if (ab) {
-                const b = document.createElement('b');
+                const b = document.createElement('b');               
                 const p = document.createElement('p');
                 b.append('摘要：');
                 p.append(b);
