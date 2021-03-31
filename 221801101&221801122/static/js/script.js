@@ -57,16 +57,16 @@ function renderSearchResult(searchResult, keyword) {
             li.append(h);
         }
         {
-            const p = document.createElement('p');
             const b = document.createElement('b');
+            const p = document.createElement('p');
             b.append('发布年份：')
             p.append(b);
             p.append(item['year'].toString());
             li.append(p);
         }
         {
-            const p = document.createElement('p');
             const b = document.createElement('b');
+            const p = document.createElement('p');
             b.append('关键词：');
             p.append(b);
             let keywords = item['keywords'];
@@ -95,8 +95,8 @@ function renderSearchResult(searchResult, keyword) {
         {
             const ab = item['abstraction'];
             if (ab) {
-                const p = document.createElement('p');
                 const b = document.createElement('b');
+                const p = document.createElement('p');
                 b.append('摘要：');
                 p.append(b);
                 const r = '/' + keyword + '/g';
