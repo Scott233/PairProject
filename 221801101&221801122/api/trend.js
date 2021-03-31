@@ -5,7 +5,7 @@ function getTrend(paperArray, keyword) {
     for (const paper of paperArray) {
         const year = paper['year'];
         const keywords = paper['keywords'];
-        if (year<2020 && year>=2010)
+        if (year < 2020 && year >= 2010)
             if (keywords.indexOf(keyword) > -1)
                 ++trend[year - 2010]
     }

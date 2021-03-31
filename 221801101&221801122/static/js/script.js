@@ -1,7 +1,7 @@
 function requestTop10() {
     $.get('/PairHomework/api/top10', result => {
-        const peak = top10[0];
         const top10 = JSON.parse(result);
+        const peak = top10[0];
         performSearch(peak);
         loadTrend(peak);
         renderTop10(top10);
@@ -95,7 +95,7 @@ function renderSearchResult(searchResult, keyword) {
         {
             const ab = item['abstraction'];
             if (ab) {
-                const b = document.createElement('b');               
+                const b = document.createElement('b');
                 const p = document.createElement('p');
                 b.append('摘要：');
                 p.append(b);
